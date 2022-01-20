@@ -6,8 +6,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "athlete")
-public class User {
+public class Athlete {
     @Id
     @GeneratedValue
     private Long id;
@@ -17,13 +16,13 @@ public class User {
     private Long weightGoal;
     private String activityLevel; //Levels: Sedentary, Light, Moderately active,Very active
 
-    public User() {}
+    public Athlete() {}
 
-    public User(String name, Long age, Long weight, Long weighGoal, String activityLevel) {
+    public Athlete(String name, Long age, Long weight, Long weightGoal, String activityLevel) {
         this.name = name;
         this.age = age;
         this.weight = weight;
-        this.weightGoal = weighGoal;
+        this.weightGoal = weightGoal;
         this.activityLevel = activityLevel;
     }
 
