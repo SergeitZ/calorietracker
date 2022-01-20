@@ -5,23 +5,23 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class User {
+public class Athlete {
     @Id
     @GeneratedValue
     private Long id;
     private String name;
     private Long age;
     private Long weight;
-    private Long weighGoal;
+    private Long weightGoal;
     private String activityLevel; //Levels: Sedentary, Lightly active, Moderately active,Very active
 
-    public User() {}
+    public Athlete() {}
 
-    public User(String name, Long age, Long weight, Long weighGoal, String activityLevel) {
+    public Athlete(String name, Long age, Long weight, Long weightGoal, String activityLevel) {
         this.name = name;
         this.age = age;
         this.weight = weight;
-        this.weighGoal = weighGoal;
+        this.weightGoal = weightGoal;
         this.activityLevel = activityLevel;
     }
 
@@ -57,12 +57,12 @@ public class User {
         this.weight = weight;
     }
 
-    public Long getWeighGoal() {
-        return weighGoal;
+    public Long getWeightGoal() {
+        return weightGoal;
     }
 
-    public void setWeighGoal(Long weighGoal) {
-        this.weighGoal = weighGoal;
+    public void setWeightGoal(Long weightGoal) {
+        this.weightGoal = weightGoal;
     }
 
     public String getActivityLevel() {
