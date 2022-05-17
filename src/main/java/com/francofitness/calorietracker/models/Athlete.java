@@ -3,6 +3,7 @@ package com.francofitness.calorietracker.models;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
 public class Athlete {
@@ -13,7 +14,7 @@ public class Athlete {
     private Long age;
     private Long weight;
     private Long weightGoal;
-    private String activityLevel; //Levels: Sedentary, Lightly active, Moderately active,Very active
+    private String activityLevel; //Levels: Sedentary, Light, Moderately active,Very active
 
     public Athlete() {}
 

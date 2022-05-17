@@ -10,17 +10,19 @@ public class Exercise {
     @GeneratedValue
     private Long id;
     private String name;
-    private String type;
+    private String type; // cardio, weight lifting, stretch
     private Long volume;
     private Long reps;
+    private Long minutes;
 
     public Exercise() {}
 
-    public Exercise(String name, Long volume, Long reps, String type) {
+    public Exercise(String name, String type, Long volume, Long reps, Long minutes) {
         this.name = name;
+        this.type = type;
         this.volume = volume;
         this.reps = reps;
-        this.type = type;
+        this.minutes = minutes;
     }
 
     public Long getId() {
@@ -61,5 +63,13 @@ public class Exercise {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public Long getMinutes() {
+        return minutes;
+    }
+
+    public void setMinutes(Long minutes) {
+        this.minutes = minutes;
     }
 }
